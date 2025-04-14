@@ -21,7 +21,7 @@ public class PersonController {
     private PersonRepository repository;
     @Autowired
     private RestTemplate restTemplate;
-    private final String url = "http://location-service/weather?name=";
+    private final String url = "http://location-service/location/weather?name=";
 
     @GetMapping("{id}/weather")
     public ResponseEntity<Weather> getWeather(@PathVariable int id) {
